@@ -1,0 +1,62 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="utf-8">
+     <title>{{logo}} {{title}}</title>
+     <meta name="description" content="^H> HucDuino : Raspberry Pi Python Flask Project">
+     <meta name="author" content="^H> HucHuino">     
+     <meta http-equiv="Refresh" content={{content}}>
+     <link rel="stylesheet" href="static/css/lcd.css"> 
+     <link rel="icon" type="image/png" href="static/images/favicon.png">
+     <style>
+ 
+     </style>
+ </head>
+ <body>
+<table align="center">
+  <tr>
+    <td><center><span class="style1a">{{logo}} {{title}}</span></center</td>
+   </tr>
+   
+   <tr>
+    <td><span class="style2a">
+        <form method="post" action="change">
+        <label for="slider-1" style="font-size: 18px" ><span class="style2a">Character to Send:</span></label><br>
+        lcd line 1  <input type="text" style="font-size: 18px" size="14" maxlength="16" name="lcd" id="lcd" /> <br>
+        lcd line 2  <input type="text" style="font-size: 18px" size="14" maxlength="16" name="lcd2" id="lcd2" /> 
+        <br> 
+        <input type="submit" style="font-size: 18px" value="Submit" />
+        </form>
+       {% if value %}
+       <p>Character  sent to line 1: {{ value }}<br>
+       Character  sent to line 2: {{ value2 }}</p>
+       {% endif %}    
+        </span>   
+   </td>
+   </tr>   
+   <tr>
+    <td><span class="style2a">&nbsp;</span></td>
+   </tr>     
+   <tr>
+    <td><span class="style2a">
+		<form action="/switch_lcd" method="POST">
+        LCD <input type="submit" style="font-size: 18px" name="btnlcd" value="On">
+        <input type="submit" style="font-size: 18px" name="btnlcd" value="Off">
+        <input type="submit" style="font-size: 18px" name="btnlcd" value="Clear"><br><br>
+        <input type="submit" style="font-size: 18px" name="btnlcd" value="Date">
+        <input type="submit" style="font-size: 18px" name="btnlcd" value="Hello World">
+        <input type="submit" style="font-size: 18px" name="btnlcd" value="RPi Model">
+        </form>        
+        </span>
+    </td>
+   </tr>
+   <tr>
+    <td><span class="style2a">&nbsp;</span></td>
+   </tr>   
+   <tr>
+    <td><center><em><span class="style2c">{{logo}} {{huc}} : Raspberry Pi Python Flask Project</span></em></center</td>
+   </tr> 
+</table>
+
+ </body> 
+ </html>
