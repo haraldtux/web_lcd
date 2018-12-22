@@ -5,7 +5,7 @@ Raspberry Pi Web Control to LCD in Python Flask.
 * Written in Python Flask
 * Tested on Raspberry Pi Model B, Zero W, 3 Model A Plus and 3 Model B Plus. 
 
-<img src="schreenshot/web_lcd.png" width="800">
+<img src="schreenshot/web_lcd1.png" width="800">
 
 ## Getting started: ##
 * Requirements : 
